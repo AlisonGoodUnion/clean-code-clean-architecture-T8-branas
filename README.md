@@ -71,18 +71,23 @@ export default class Circle {
     #npx jest
     Obs: se os testes executaramm com sucesso, esta tudo certo.
 
+##### Resultados Esperados:
+    * Ter um olhar mais crítico e profissional em relação ao desenvolvimento de software, elevando seu nível de maturidade e buscando sempre 
+      criar um ambiente de qualidade;
+    * Saber aplicar diversas técnicas de Clean Code e Refactoring com o objetivo de tornar o código mais limpo e comprrensível;
+    * Entender como desenvolver utilizando Test-Driven Development;
+    * Dominar os princípios da Programação Orientada a Objetos;
+    * Saber como estruturar a arquitetura da sua aplicação utilizando Clean Architecture e Domain-Driven Design;
+    * Conhecer vários Design Patterns e entender como eles podem ajudar a criar códigos mais desacoplados e manutenível;
+    * Aplicar os SOLID principles na prática;
+    * Entender aonde faz sentido aplicar EventSourcing e CQRS;
+    * Se tornar uma pessoa muiuto mais conffiante no dia a dia de trabalho, 
+      discussões técnicas, entrevistas de emprego e em outras situações onde seja 
+      necessário discutir sobre arquitetura de software;
 
 
+    
 
-
-
-
-
-
-
-
-
- 
 #####Lista de livros recomendados:
 
     Clean Code: 
@@ -109,3 +114,154 @@ export default class Circle {
         https://www.amazon.com.br/Xunit-Test-Patterns-Refactoring-Code/dp/0131495054/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1656968887&sr=8-1
     Domain-Driven Design: 
         https://www.amazon.com.br/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/
+
+
+# Aula 1:
+    O código-fonte é tão bagunçado que você não sabe nem por onde 
+    começar a desenvolver uma nova funcionalidade ou corrigir um defeiro?
+##### Priorizar códigos que só uma pessoa saber mexer.
+    Disseminar conhecimento respeitando os níveis técnicos.
+    fazer pair programming, centralização de conhecimento não é legal.
+##### Você tem medo de mexer em uma coisa e etragar outra? tem medo detrabalhar no core domain do projeto ? (se você tem medo não refatora)
+    Testabilidade é um fator essencial para pontos complexos e sensíveis ao negócio.
+ ![Alt text](src/images/bobs-memes1.jpg?raw=true "Title")
+ 
+##### Existem mais defeitos para corrigir do que novas funcionalidades para implementar.
+    Como manter uma pessoa feliz que só corrige defeitos, dívidas acumuladas que não foram pagas(bugs)?
+    Temos que ser profissionais e éticos com nosso trabalho, e o fato de não refatorarmos e testarmos afetam 
+    resultados que estamos tentando buscar.
+    Não podemos aceitar certos comentários de pessoas que não entender nosso trabalho, 
+    Você iria dizer para um médico como ele deve operar alguém?]
+    Dar opinião de um assunto que não entendo, não devemos aceitar opinião de quem não tem noção
+    mas devemos ouvir e explicar que não faz sentido.  
+##### Trabalhar sob pressão
+    Precisando parar atividades no meio para fazer outra coisa mais 'urgente' 
+    e eventualmente até te pedem para fazer hora extra?
+    Muitas demandas pode ser bom pois o negócio esta crescendo, mas
+    sob pressão podemos tomar decisões erradas, horas extras sim, mas tudo tem limite.
+##### Ninguém tem coragem de fazer deploy na sexta-feira:
+    Você tem coragem de fazer um deploy a qualquer hora do dia ?
+    esse é um bom teste de maturidade. 
+    Quando se tem Testabilidade e Resiliência.
+    
+##### Por quê isso tudo acontece ?
+    Forma pelo qual o código foi implementado.
+    Temos que nos atentar a indentação, nomes que fazem sentido
+    condições de cadeias de IFs, quantidade de linhas.
+    Algumas coisas de forma inconsciente diz que o código esta ruim.
+
+    Qualidade de código não é sinonimo de sucesso. (Você pode fracassar comercialmente)
+    Mas ter um código ruim, afetam no custo, retenção, manutenção.
+    
+##### Passamos mais tempo LENDO o código do que ESCREVENDO:
+    Ja virou a noite codando por conta de um incidente ?
+    as vezes uma linha resolve esse problema, mas porque levamos a noite toda?
+    porque o gargalo não esta na digitação e sim (aonde e como), o ponto exato do codigo para resolver.
+    
+##### Bob: nosso desafio é reduzir ou pelo menos manter o esforço de desenvolvimento constante com o passar do tempo:
+    Na 1º semana do projeto passamos bastante tempo codando, mas a medida que o tempo passa
+    codamos menos, a produtividade é reduzida, quanto mais antigo o projeto menor a produtividade
+    para virar esse jogo é investir em refactoring, testes, modelagem estrategica desacoplando negocios (DDD)
+    mas da trabalho sair disso.
+
+##### Existe um paradoxo entre dois valores, COMPORTAMENTO e ESTRUTURA:
+    Comportamento = stakeholders, ganham ou economizam dinheiro. 
+    
+    Se depender do cliente não vamos refatorar ou testar, criar microservices, containers, usar DDD o cliente
+    ou o stakeholder não estão interessados, oq importa para ele é escopo e funcionalidades.
+    Mas como ela não é da área e não domina as tecnicas, escrever só comportamento a tendência é que 
+    a estrutura não vai suportar.
+    
+    Temos que equilibrar a Estrutura pois é oq mantém o projeto de pé sem colapsar.
+    Quando custo x maior receita, rotatividade, produtividade, defeitos. 
+
+##### Pense na estrutura como:
+    Métodos, Classes, Módulos, Serviços 
+    e a Relação entre cada um deles. 
+
+##### Quanto mais comportamento adicionado, mais estrutura:
+    Quanto mais comportamento for adicionado ao software, mais estrutura será necessária para suportá-lo
+    de forma eficaz.
+    Ex:SOLID, Design Patterns DDD, POO = como trazer ESTRUTURA para o COMPORTAMENTO.
+
+##### Existe uma disputa por comportamento de um lado e estrutura de outro: 
+    Sempre vai ter uma força fazendo com que você abra mão de uma melhoria. 
+    Não tente explicar para alguém que não é da área a importancia da estrutura
+    ela não vai entender, devemos incorporar isso na estimativa.
+
+    Menos produtividade = menos motivação
+    Ninguém se sente bem fazendo gambiarra
+    Já pediu demissão alguma vez porque não aguentava mais o projeto?
+
+##### Qualidade do código afeta a rotatividade.
+
+    O que motiva uma pessoa? algumas são: 
+    * Dinheiro;
+    * Ambiente de trabalho;
+    * Crescimento profissional;
+    Esses 3 fatores equilibrados motivam equipe e refletem nos resultados.
+    
+    Para quem lidera um time.
+    * Esse tipo de problema afeta a empresa inteira.
+
+#### Como funcionam as estimativas onde você trabalha?
+    * Esforço X Data Entrega: são coisas diferentes.
+    * Somar na estimativa a incerteza com códigos ruins.
+      Obs: No decorrer do desenvolvimento podemos encontrar imprevistos. 
+      e a Incerteza faz com que a estimativa seja extremamente elástica.
+    * Acertar estimativas tem a ver com o nível de controle sobre o ambiente
+      estruturas frágeis nos levam a falhas de estimativas.
+    
+    * Clientes vão reportar cada vez mais problemas =  ambiente mais caótico.
+    * Ao longo das releases a produtividade cai, pois perdemos tempo procurando 
+      aonde devemos realizar o ajuste.
+
+#### A base para se ter uma empresa sob controle é ter o código sob controle. 
+    * Com a concorrência cada vez maior, o comercial começa a vender menos. 
+    * O impacto financeiro aparece. 
+
+#### Afinal o que é Clean Code?
+    * Qualquer livro que lide com isso tras ideias parecidas. 
+    * Clean code é simples e direto: mas isso é dificil de 
+      se fazer pois é dificil ser simples e direto;
+      (Grandy Booch criador doo UML)
+    * A logica deve ser clara e direta para fazer para fazer 
+      com que sejam dificeis para os defeitos se esconderem.
+      (Bjarne Stroustrup, criador do C++)
+    * Clean code sempre se parece com código escrito por alguém que se importa.
+      (Michael Feathers) Working Effectively with legacy code.
+    * Voce olha o código e cada trecho é exatamente aquilo que você esperava que fosse
+      você esta lidando com código de qualidade.
+      (Ward Conningham (criador da wiki)) 
+    * Qualquer um escreve código que o computador entenda, agora bons programadores 
+      escrevem códigos que outros seres humanos conseguem entender.  
+      (Martin Fowler)
+#### Como medir qualidade de código?
+    Medir por, linhas, qtd métodos ?, tamanho dos métodos? complexidade?
+    escrever sobre algo que nos importamos.    
+    
+    Mas é pela quantidade de WTFs por minutos.
+    você já xingou o autor do código? se você já fez isso é pq o código esta mal mesmo.
+    
+#### Acumulo de comportamento sem estrutura.
+    Negligencia e acumulo de divida técnica. 
+![Alt text](src/images/acumulo_comp_sem_estrut.png?raw=true "Title")
+
+    Imagine trabalhar nesse ambiente.
+    Nenhum ambiente fica nesse estado de uma hora para outra. 
+
+    E parecido com a metáfora da janela quebrada.
+    Ex: tem um prédio abandonado com algumas janelas e todas intactas
+    mas no momento que a primeira janela é quebrada, as outras também começaram a ser vandalizadas.
+    
+    * Ah mas a pessoa não quer priorizar uma atividade de refactoring!
+    Refactoring não é uma atividade e sim uma prática do dia a dia, na forma como você se expressa.
+    Essa cozinha não ficou suja do dia para a noite, foram vários dias de negligencia.
+    O mesmo acontece com o código.    
+
+    
+#### Ponto de não retorno (Refatore antes que seja tarde!). 
+    * Chega uma hora que a dívida esta tão alta que o único jeito é jogar tudo fora e refazer.
+      e é mais rápido refazer.
+    Obs: Muitas vezes, existe um ponto de não retorno, evite chegar lá, poderá ser muito 
+         caro e muito arriscado fazer qualquer mudança. 
