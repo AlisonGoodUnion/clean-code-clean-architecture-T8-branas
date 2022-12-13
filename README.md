@@ -265,3 +265,56 @@ export default class Circle {
       e é mais rápido refazer.
     Obs: Muitas vezes, existe um ponto de não retorno, evite chegar lá, poderá ser muito 
          caro e muito arriscado fazer qualquer mudança. 
+
+
+### Refactoring.
+    Alteração feita na estrutura interna do software para torná-lo mais fácil 
+    de ser entendido e menos custoso de ser modificado, sem alterar o seu 
+    comportamento observável. (Martin Fowler)
+
+    É um investimento, torna o software sustentável e competitivo. 
+     
+    Ou você refatora ou faz melhorias, fazer as duas ao mesmo tempo não é o ideal.
+    Com o tempo a gente vai escrevendo códigos de boa qualidade automaticamente.  
+
+    Ao negligenciar o rendimento da equipe vai cair, 30 min de refactoring hoje é uma economia 
+    economiza 30min de cada um e acaba se pagando.
+    
+    * Refactor com um propósito, evite refatorar apenas por refatorar.
+    * Fique atendo as oportunidade. Introduza o refactoring em todas as tarefas. 
+      Obs: é um trabalho de formiguinha. 
+
+#### Muitas empresas precisam contrair algumas dívdidas para <br> crescer e escalar sua operação.
+    
+    Cuidado, com o aumento da dívida técnica, os juros são bem altos. 
+    mantenha a dívida sob controle
+    
+    * Se nos queremos considerar linhas de código, devemos pensar em não em linhas produzidas 
+    mas sim quantas linhas você gasta para resolver um problema (Edsger Dijkstra)
+    Quando mais objetivo você for, melhor é.
+    
+    Refactoring não se aplica somente no código.  
+
+
+![Alt text](src/images/code-design-architecture.png?raw=true "Title")
+
+    Conforme aplicamos técnicas de refactoring, tanto o código vai ficando melhor
+    escrito, quanto ele começa a externalizar comportamento que precisa ser colocado 
+    em algum lugar.
+
+    Dessign: A extração em métodos e funções quando param em outras classes
+    e essas classes precisam se relacionar isso a gente chama de design.
+    
+    Architecture: Ex: pegar 10 classses e jogar para um microserviço
+    para que outros sistemas tenham acesso a info, novos componentes 
+    precisam de interação, e essa interação se torna parte da arquitetura.
+    Feita de decisões importantes e difíceis de mudar(linguagem, framework, tipo de comunicação, sync, async?).
+    
+    Código: mera sequência de instruções.  
+     
+#### Como evitar que o problema aconteça?
+    
+    * Reconhecer e lidar no dia a dia com os code smells
+      tomando ações necessárias.
+    * Um Smell é um sintoma que ocorre dentro do código fonte
+      e que pode se rum indicador de problema. 
