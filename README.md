@@ -324,13 +324,21 @@ export default class Circle {
 
 # Refactoring
 
-1º Realizar Testes antes, assim perdemos o medo e ganhamos mais confiança no refactoring.
+###Smells
 
-1 - Nome Estranho.
+Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança no refactoring.
+
+##### 1 - Nome Estranho.
     
     cccat8_refactoring_1/v1
-    Ex: O que são ? calc.ts, dist, ds, result ?  
+    Ex: O que são ? 
+    calc.ts = calculateRide
+    dist = distance
+    ds = date
+    mov = segment
+    movArray = segments (segmentos dentro da corrida)
+    result = fare (tarifa)  
     
     Obs: Identificar os nomes estranhos e refacotrar
     após alguns renames, devem ser executados os testes novamente. 
-    
+
