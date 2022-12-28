@@ -319,3 +319,18 @@ export default class Circle {
       tomando ações necessárias.
     * Um Smell é um sintoma que ocorre dentro do código fonte
       e que pode se rum indicador de problema. 
+
+
+
+# Refactoring
+
+1º Realizar Testes antes, assim perdemos o medo e ganhamos mais confiança no refactoring.
+
+1 - Nome Estranho.
+    
+    cccat8_refactoring_1/v1
+    Ex: O que são ? calc.ts, dist, ds, result ?  
+    
+    Obs: Identificar os nomes estranhos e refacotrar
+    após alguns renames, devem ser executados os testes novamente. 
+    
