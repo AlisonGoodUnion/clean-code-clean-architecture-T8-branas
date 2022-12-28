@@ -68,9 +68,10 @@ export default class Circle {
 }
 ````
 ##### Executar:
-    #npx jest
+    #npx jest    
     Obs: se os testes executaramm com sucesso, esta tudo certo.
-
+    #npx jest --coverage 
+    Obs: Coverage command file local /coverage/lcov-report/index.html
 ##### Resultados Esperados:
     * Ter um olhar mais crítico e profissional em relação ao desenvolvimento de software, elevando seu nível de maturidade e buscando sempre 
       criar um ambiente de qualidade;
