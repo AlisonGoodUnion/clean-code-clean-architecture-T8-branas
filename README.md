@@ -342,3 +342,17 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     Obs: Identificar os nomes estranhos e refacotrar
     após alguns renames, devem ser executados os testes novamente. 
 
+##### 2 - Linhas em branco
+
+    Linhas em branco não servem para absolutamente nada.
+    Cada pessoa do time tem o seu 'jeito' de utilizar as linhas em branco
+    então é interessante definir um padrão. 
+    
+    Ideal não utilizar linhas em branco dentro dos métodos.
+    (assim conseguimos ver mais código, ou quase o método todo praticamente.)
+    
+    Linhas em branco deixa o código mais legivel?
+    sim, mas podemos substituir essas linhas por extrações de métodos ou design de classes. 
+
+    * Rolar o scroll do mouse toda a vez é ruim! classes grandes são legais.
+      Medida ideal de altura é a que couber no seu monitor :)
