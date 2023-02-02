@@ -329,7 +329,7 @@ export default class Circle {
 Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança no refactoring.
 
 ##### 1 - Nome Estranho.
-    
+    Ação: Renomear variáveis, métodos, funções, classes, arquivos. 
     cccat8_refactoring_1/v1
     Ex: O que são ? 
     calc.ts = calculateRide
@@ -344,6 +344,8 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
 ##### 2 - Linhas em branco
 
+    Ação: apagar linhas em branco, extrarir em métodos.
+
     Linhas em branco não servem para absolutamente nada.
     Cada pessoa do time tem o seu 'jeito' de utilizar as linhas em branco
     então é interessante definir um padrão. 
@@ -356,3 +358,12 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
     * Rolar o scroll do mouse toda a vez é ruim! classes grandes são legais.
       Medida ideal de altura é a que couber no seu monitor :)
+
+
+##### 3 - Comentários
+    Ação: Introduzir variáveis explicativas, extrair em métodos
+    apagar comentários.
+
+##### 4 - Código Morto. (é diferente de comentário.)
+    Ação: Código comentado deve ser apagado.
+    
