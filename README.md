@@ -366,4 +366,9 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
 ##### 4 - Código Morto. (é diferente de comentário.)
     Ação: Código comentado deve ser apagado.
-    
+
+##### 5 Condições confusas e aninhadas - Simplificar Condições. 
+    Ação: Inverter condições ou introduzir cláusas guarda.(inverter condições para eliminar elses)
+    Obs: após inverter condições else toamr cuidado com identação. 
+    Ação: Consolidar Condições: Quando tempos condição depois de condição, incluindo legibilidade
+    introdução de if ternarios
