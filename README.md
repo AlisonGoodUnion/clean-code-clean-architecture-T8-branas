@@ -377,4 +377,19 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     Ação: Extrair para constantes explicativas.
 
 ##### 7 - Tratamento inadequado de exceptions.
-    Ação: introduzir tratamento de exceptions 
+    Ação: introduzir tratamento de exceptions
+
+##### Começando a resolver com Design
+    POO é a arte de preservar invariancia.
+    Pegar classes grandes dividir em classes menores, 
+    e deixar cada classe com suas regras, diminuindo complexidade.
+
+##### 8 - Excesso de parâmetros
+    Quanto menos melhor
+    Instruduzir instancias para reduzir parametros 
+
+##### 9 - Métodos grandes
+    extrair métoso
+
+##### 10 - Classe grande
+    extrair classe
