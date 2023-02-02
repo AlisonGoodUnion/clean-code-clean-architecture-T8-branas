@@ -35,18 +35,16 @@ test("Deve calcular uma corrida no domingo noturno", function () {
 
 //COVERAGE 88
 test("Não deve calcular uma corrida com distanceância inválida", function () {
-    const fare = calculateRide(
-        [{ distance: -10, date: new Date("2021-03-10T10:00:00") }]
-    );
-    expect(fare).toBe(-1);
+    expect(() => calculateRide(
+        [{distance: -10, date: new Date("2021-03-10T10:00:00")}]
+    )).toThrow(new Error("Invalid Distance"));
 });
 
 //COVERAGE 94
 test("Não deve calcular uma corrida com data inválida", function () {
-    const fare = calculateRide(
-        [{ distance: 10, date: new Date("javascript") }]
-    );
-    expect(fare).toBe(-2);
+    expect(() => calculateRide(
+        [{distance: 10, date: new Date("javascript")}]
+    )).toThrow(new Error("Invalid Date"))
 });
 
 //COVERAGE 100

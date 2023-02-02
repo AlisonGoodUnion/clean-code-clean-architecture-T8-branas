@@ -17,11 +17,18 @@ function isSunday(date: Date) {
     return date.getDay() === 0;
 }
 
+function isValidDistance(distance: number) {
+    return distance && typeof distance === "number" && distance > 0;
+}
+
+function isValidDate(date: Date) {
+    return date && date instanceof Date && date.toString() !== "Invalid Date"
+}
 export function calculateRide(segments: { distance: number, date: Date }[]) {
     let fare = 0;
     for (const segment of segments) {
-        if (!segment.distance || typeof segment.distance !== "number" || segment.distance < 0) return -1;
-        if (!segment.date || !(segment.date instanceof Date) || segment.date.toString() === "Invalid Date") return -2;
+        if (!isValidDistance(segment.distance)) throw new Error("Invalid Distance");
+        if (!isValidDate(segment.date)) throw new Error("Invalid Date");
         if (isOvernight(segment.date) && !isSunday(segment.date)) {
             fare += segment.distance * OVERNIGHT_FARE;
         }

@@ -370,7 +370,11 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     Ação: Inverter condições ou introduzir cláusas guarda.(inverter condições para eliminar elses)
     Obs: após inverter condições else toamr cuidado com identação. 
     Ação: Consolidar Condições: Quando tempos condição depois de condição, incluindo legibilidade
-    introdução de if ternarios
+    introdução de if ternarios, 
+    extrair condições
 
 ##### 6 - Números mágicos 
     Ação: Extrair para constantes explicativas.
+
+##### 7 - Tratamento inadequado de exceptions.
+    Ação: introduzir tratamento de exceptions 
