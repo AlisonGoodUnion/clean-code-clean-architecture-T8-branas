@@ -414,9 +414,17 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     Strategy: Define familia de algoritmos devidamente encapsulados que podem ser intercambiaveis
     faz com q vc possa variar o algoritmo dependendo da forma de utilizacao
     Polimorfismo: (Contrato Interface -> e + 4 Fare algoritimos que podem ser intercambiaveis.) 
+
     Factory: 
     Existem 2 tipos abstract factory: interface para criação de familia de objetos
     Factory method: interface pra criacao de objeto e a subclass defina quem deve implementar(polimorfismo).
+
+    Chain of Responsability
+    Chain = cadeia, rede, sequencia
+    Responsability = responsabilidade, comportamento.
+
+    O reafactoring usando design patterns leva em consideração todas as regras da aula 1
+    classe grande, métodos grandes, excesso de params, tratamento inadequado de exceptions etc...
 
 ##### 2 Testes (Test-Driven Development) - Parte 1
 
