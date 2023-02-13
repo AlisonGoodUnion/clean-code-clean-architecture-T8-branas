@@ -393,3 +393,35 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
 ##### 10 - Classe grande
     extrair classe
+
+### Anotações Aula2
+
+    ORDEM: code > design > architecture.
+    
+    Dica: ir desdobrando as coisas, extraindo em métodos, classes etc...
+    para reduzir tamanho, simplificar condicionais,
+    e ficar mais fácil testar a nível de unidade.
+    Mas apos a extração temos um problema pois temos que avançar para o design
+    e assim trabalhamos com informações e códigos que tem relação de négócio.
+
+
+##### 1 Design Patterns - Strategy, Factory e Chain of Responsibility
+    POO: Proteção de invariancia, protege as caracteristicas interna 
+    dos objetos com modificadores de visibilidade que promovem encapsulamento.
+    * Diciplina da transferencia indireta de controle.
+    Ex: metodo calculateFare na classe Ride transfere a responsabilidade do calculo.
+
+    Strategy: Define familia de algoritmos devidamente encapsulados que podem ser intercambiaveis
+    faz com q vc possa variar o algoritmo dependendo da forma de utilizacao
+    Polimorfismo: (Contrato Interface -> e + 4 Fare algoritimos que podem ser intercambiaveis.) 
+    Factory: 
+    Existem 2 tipos abstract factory: interface para criação de familia de objetos
+    Factory method: interface pra criacao de objeto e a subclass defina quem deve implementar(polimorfismo).
+
+##### 2 Testes (Test-Driven Development) - Parte 1
+
+##### 3 Code Smells e Técnicas de Refactoring - Parte 2
+
+##### 4 Implementação do Projeto - Parte 1 (TDD e Refactoring)
+
+##### Projeto - Parte 2

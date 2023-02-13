@@ -3,6 +3,11 @@ export default class Segment {
     OVERNIGHT_START = 22;
     OVERNIGHT_END = 6;
 
+    // para criar segment passamos pelo metodo publico
+    // para isso existe uma mediação/arbitragem para interagir com as caracteristicas do objeto
+    // isso se chama proteção de variancia, proteção de estado interno.
+    // disciplina sobre a transferencia indireta de controle (POO)
+    // um exemplo o isOvernight
     constructor(readonly distance: number,
                 readonly date: Date) {
         if (!this.isValidDistance(distance)) throw new Error("Invalid Distance");
