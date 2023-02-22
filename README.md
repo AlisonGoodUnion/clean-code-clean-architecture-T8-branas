@@ -428,6 +428,76 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
 ##### 2 Testes (Test-Driven Development) - Parte 1
 
+    Ter testes "não é uma garantia de que não vão existir defeitos".
+    Mas reduz as chances e da coragem em refatorações. 
+    Defeitos sempre acontecem e os testes vão minimizar.
+
+    1º sintoma: você fica torcendo para que o código funcione durante o desenvolvimento até produção
+    Obs: sinal que poderiam existir mais testes e um processo de desenvolvimento mais maduro.
+    2º Decorar dados que precisam ser digitados na tela para testar uma determinada funcionalidade.
+    Obs: Perde tempo d+ decorando dado de usuários, sendo assim o teste contém essas infos.
+    3º Somos bem menos produtivos do que poderíamos ser. quem é mais rápido você ou o computador ?
+    4º Eventualmente mexer em uma coisa estraga outra. (as coisas estão integradas.) 
+    Obs: os testes vem para testar todos os lados do sistema, e podem ser executados inúmeras vezes. 
+    5º Ficamos com medo de ajustar ou melhorar alguma funcionalidade.
+    
+    * 'Medo impede evolução'
+
+    E pq não fazemos ? teste requer muita disciplina.
+    Nos acostumamos a começar pela tela ou pelo banco e não pelo domínio.
+    Muitas vezes não temos informações suficientes para começar a desenvolver
+    e também o design e a arquitetura não ajudam para realizar a automação dos testes.
+
+    O que é um teste automatizado ?
+    Dado: conjunto de entrada 
+    Quando: algo acontecer
+    Então: a saída deve suprir as expectativas.
+
+    Given/Arrange: Definição de todas as informações necessárias para executar o comportamento testado. 
+    When/Act: Executar o comportamento.
+    Then/Assert: Verificar o que aconteceu após execução e realizar validações com as expectativas que foram criadas.
+
+    Quais são os tipos? Unit, Integration, EndToEnd.(esse são alguns)
+    Ex: Se pararmos para testar uma bicicleta, e testarmos os componentes de forma individual 
+    não necessariamente a bicicleta ira funcionar pois ela só funciona se todos estiverem integrados
+    então o testes de integração também é importante.
+    Nível de integração pode ser que as unidades não funcionam. 
+    O End-to-End é em um nível de UseCase real com interações reais. 
+
+    A combinação dos 3 traz o sucesso.
+
+![img.png](src/images/test-pyramid.png)
+
+    * Conceito de FIRST *
+
+    * F Fast: Testes devem rodar rápido! 
+    (testes de integração são lentos principalmente em bancos relacionais)
+    Relações e quantidade de registros podem deixar o teste lento por conta do IO.
+    Tempo Ideal ? o menor possível.
+    * I Independent: Não deve existir dependência entre testes, devem ser executados de forma isolada
+    (quando 2 testes usam o mesmo registro para fazer asserts)
+    Rodar teste em paralelo não temos garantia de ordem de execução.
+    Rodar teste de forma objetiva: se 1 dos testes que cria dados falhar os outros que depende dele vão falar
+    por isso a importância de ser independente.
+    * R Repeatable: Devemos poder executar várias vezes o testes, uma data pode dar problema na repetição dos testes.
+    * S Self-validating: O próprio teste deve ter uma saída bem definida que é válida ou não.
+    (não utilize console logs)
+    * T timely: Escritos antes do código-fonte
+
+    OBs: (teste de integracao nao é um teste de healthcheck)
+
+    Fluxo TDD
+![img.png](src/images/fluxo-tdd.png)
+    
+    As 3 regras do TDD
+    1 - Primeiro escreva o teste que detecta a falha, após isso escreva o código.
+    2 - Não escrever mais testes de unidade do que o suficiente
+        Obs: Escreva 1 e resolva, ao invés de escrever 10 e tentar resolver os 10.
+    3 - Escreva código suficiente até o teste passar após isso crie outro teste e faça ele passar siga esse ciclo.
+        Obs: disciplina!
+
+    
+
 ##### 3 Code Smells e Técnicas de Refactoring - Parte 2
 
 ##### 4 Implementação do Projeto - Parte 1 (TDD e Refactoring)
