@@ -499,6 +499,19 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     
 
 ##### 3 Code Smells e Técnicas de Refactoring - Parte 2
+    Refactoring da classe validade.ts
+    Conforme visto anteriormente:
+    (remover o que não agrega)
+    1º Nome estranho 
+    2º Linhas em branco.
+    3º Comentários. 
+    4º Código morto.
+    5º condições confusas e aninhadas
+    (podemos combinar ou inverter as condições, 
+    geralmente tem if dentro de if o código fica cada vez mais distante da margem)
+    6º números mágicos
+    7º tratamento inadequado de exceptions
+    8º excesso de parâmetros
 
 ##### 4 Implementação do Projeto - Parte 1 (TDD e Refactoring)
 
