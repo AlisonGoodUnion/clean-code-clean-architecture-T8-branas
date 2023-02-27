@@ -510,6 +510,7 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     (podemos combinar ou inverter as condições, 
     geralmente tem if dentro de if o código fica cada vez mais distante da margem)
     6º números mágicos
+    (a variavel deve ser declarada de fato onde ela vai ser utilizada)
     7º tratamento inadequado de exceptions
     8º excesso de parâmetros
 

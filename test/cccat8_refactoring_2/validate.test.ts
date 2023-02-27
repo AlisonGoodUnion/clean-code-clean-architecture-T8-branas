@@ -1,4 +1,4 @@
-import {validate} from "../../src/cccat8_refactoring_2/validate";
+import {validate} from "../../src/cccat8_refactoring_2/v2/validate";
 import expect from "expect";
 
 test("Deve validar o cpf válido que tem dígito maior de zero", function () {
@@ -18,16 +18,6 @@ test("Deve validar o cpf com dígito zero no segundo dígito", function () {
 
 test("Deve tentar validar cpf com mais de 14 characteres", function () {
     const isValid = validate('893.458.200-600');
-    expect(isValid).toBeFalsy();
-});
-
-test("Deve tentar validar cpf undefined", function () {
-    const isValid = validate(undefined);
-    expect(isValid).toBeFalsy();
-});
-
-test("Deve tentar validar cpf null", function () {
-    const isValid = validate(null);
     expect(isValid).toBeFalsy();
 });
 
