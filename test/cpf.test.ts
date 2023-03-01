@@ -1,19 +1,15 @@
 import expect from "expect";
 import Cpf from "../src/Cpf";
 
-test("Deve validar o cpf válido que tem dígito maior de zero", function () {
-    const cpf = new Cpf('356.232.330-15');
-    expect(cpf).toBeDefined();
-});
+const validCPF = [
+    '356.232.330-15',
+    '815.128.790-02',
+    '893.458.200-60'
+];
 
-test("Deve validar o cpf com dígito zero no primeiro dígito", function () {
-    const cpf = new Cpf('815.128.790-02');
-    expect(cpf).toBeDefined();
-});
-
-test("Deve validar o cpf com dígito zero no segundo dígito", function () {
-    const cpf = new Cpf('893.458.200-60');
-    expect(cpf).toBeDefined();
+test.each(validCPF)("Deve validar o cpf ", function (cpf) {
+    const validCPF = new Cpf(cpf)
+    expect(validCPF).toBeDefined();
 });
 
 test("Deve tentar validar cpf com mais de 14 characteres", function () {
@@ -22,9 +18,22 @@ test("Deve tentar validar cpf com mais de 14 characteres", function () {
     }).toThrow(new Error('CPF invalido'));
 });
 
-test("Deve tentar validar cpf com digitos iguais", function () {
+const cpfWithSameDigit = [
+    "000.000.000-00",
+    "111.111.111-11",
+    "222.222.222-22",
+    "333.333.333-33",
+    "444.444.444-44",
+    "555.555.555-55",
+    "666.666.666-66",
+    "777.777.777-77",
+    "888.888.888-88",
+    "999.999.999-99"
+];
+
+test.each(cpfWithSameDigit)('Deve tentar validar cpf com todos os digitos iguais', function (cpf: string) {
     expect(() => {
-        new Cpf('111.111.111-11');
+        new Cpf(cpf);
     }).toThrow(new Error('CPF invalido'));
 });
 
