@@ -516,4 +516,21 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
 ##### 4 Implementação do Projeto - Parte 1 (TDD e Refactoring)
 
+    CLI: yarn ou npm
+    #: yarn init -y
+    #: yarn add typescript jest ts-node ts-jest nodemon @types/jest
+    #: npx tsc --init
+    #: npx ts-jest --init
+
+    TESTES: 
+    1-Não deve criar um pedido com CPF inválido.
+    2-Deve criar um pedido com 3 itens (com descrição, preço e quantidade).
+    3-Deve criar um pedido com cupom de desconto (percentual sobre o total do pedido).
+    Dica: tente seguir com disciplina.
+          1º teste que falha;
+          2º teste passar;
+          3º refatorar;
+
+    Uma classe classifica, enquadra algo em uma determinada classificacao.
+
 ##### Projeto - Parte 2
