@@ -8,6 +8,11 @@ test('nao deve criar um pedido com CPF invalido', function () {
        .toThrow('CPF invalido');
 });
 
+test('Deve criar um pedido sem itens', function () {
+   const order = new Order('893.458.200-60');
+   expect(order.getTotal()).toBe(0);
+});
+
 test('Deve criar um pedido com 3 itens', function () {
    const order = new Order('893.458.200-60');
    order.addItem(new Item(1, "Guitarra", 1000), 1);

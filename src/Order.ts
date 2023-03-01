@@ -19,12 +19,12 @@ export default class Order {
 
     getTotal() {
         let total = this.orderItems.reduce((total, orderItem) => {
-            total += orderItem.price * orderItem.quantity;
+            total += orderItem.getTotal();
             return total;
         }, 0);
 
         if (this.coupon) {
-            total -= (total * this.coupon.percentage) / 100;
+            total -= this.coupon.getDiscount(total);
         }
 
         return total;
