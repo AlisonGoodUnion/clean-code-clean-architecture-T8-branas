@@ -533,4 +533,23 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
     Uma classe classifica, enquadra algo em uma determinada classificacao.
 
-##### Projeto - Parte 2
+##### Ports and Adapters
+
+    PORTS and ADAPTERS
+    Antigamente era comum misturarmos responsabilidades no mesmo lugar ex: no PHP 
+    utilizávamos o codigo front para conexão no banco.
+    Temos que separar por camadas, 1 obtem info, 1 exibe info, 1 executa regra.
+    Esse problema de design ocasionou vários problemas em aplicações antigas. 
+    Se seguirmos esse padrão é muito difícil de implementar testes (quando a view tem muita responsabilidade)
+<br>
+
+    ALISTAIR COCKBURN: 
+    Permitir que um aplicativo seja igualmente conduzido por usuários,
+    programas, testes automatizados ou scripts em lote, e que seja desenvolvido
+    e testado isoladamente de seus eventuais dispositivos de tempo de execução e bancos de dados.
+    (ISOLAMENTO DISPOSITIVO DE IOs)
+    
+![img.png](src/images/ports_and_adapters.png)
+
+    inbounds: Lado esquerdo 'drivers' quem conduz a aplicação
+    outbounds: Lado direito interação driven side: com base de dados filas ou filesystem. 
