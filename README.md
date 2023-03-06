@@ -559,3 +559,12 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
     Quando falamos de interface achamos que a nossa API rest é a nossa interface 
     mas na verdade ela é um drive e suas interfaces tem q ficar no centro.
+
+    Criamos 2 serviços Currency e o Cards Invoces 
+    como testar os 2 serviços já que eles estão integrados. 
+    FIRST =
+    fast, 
+    independent,
+    repatable,
+    self-validation,
+    timely 
