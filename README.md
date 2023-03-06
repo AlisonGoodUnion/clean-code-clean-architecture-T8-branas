@@ -521,6 +521,8 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     #: yarn add typescript jest ts-node ts-jest nodemon @types/jest
     #: npx tsc --init
     #: npx ts-jest --init
+    #: npx add express @types/express pg-promise
+    #: npx ts-node src/main.ts
 
     TESTES: 
     1-Não deve criar um pedido com CPF inválido.
@@ -553,3 +555,6 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
     inbounds: Lado esquerdo 'drivers' quem conduz a aplicação
     outbounds: Lado direito interação driven side: com base de dados filas ou filesystem. 
+
+    Quando falamos de interface achamos que a nossa API rest é a nossa interface 
+    mas na verdade ela é um drive e suas interfaces tem q ficar no centro.
