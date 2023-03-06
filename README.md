@@ -523,6 +523,7 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     #: npx ts-jest --init
     #: npx add express @types/express pg-promise
     #: npx ts-node src/main.ts
+    nodemon para auto-reload #: npx nodemon src/main.ts
 
     TESTES: 
     1-Não deve criar um pedido com CPF inválido.
