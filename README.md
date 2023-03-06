@@ -561,10 +561,17 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     mas na verdade ela é um drive e suas interfaces tem q ficar no centro.
 
     Criamos 2 serviços Currency e o Cards Invoces 
-    como testar os 2 serviços já que eles estão integrados. 
+    como testar os 2 serviços já que eles estão integrados? 
     FIRST =
     fast, 
     independent,
     repatable,
     self-validation,
     timely 
+
+![img.png](driver_drivern_ports.png)
+
+    API é uma interface que estou expondo ao mundo e posso ter vários tipos de
+    drivers, driven sides também tem portas as regras estão plugadas e expostas
+    na API e usa uma interface que usa um driven externo(no caso o servico de currency).
+    
