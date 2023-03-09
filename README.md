@@ -523,6 +523,7 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     #: npx ts-jest --init
     #: npx add express @types/express pg-promise
     #: npx ts-node src/main.ts
+    TEST MOCKS: #: npm add sinon 
     nodemon para auto-reload #: npx nodemon src/main.ts
 
     TESTES: 
@@ -602,4 +603,33 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
 
     A aplicação expõe uma ou mais portas, dispositivos se conectam nelas e a aplicação 
     recebe via injeção de dependência o driven dos recursos que ela consome.
-    Faz sentido aplicar em todos os projetos. 
+    Faz sentido aplicar em todos os projetos.
+    Podemos utilizar até no frontend(mas se aplica mais o driven). 
+
+
+##### TESTS - Ports and Adapters :
+
+![img.png](src/images/3regrasTDD.png)
+
+    Só que nem sempre é tão simples de seguir essas 3 regras
+    O que fazer quando existem entradas e saídas indiretas no componente testado?
+    o teste se acaba se tornando mais complexo.
+
+    Um test double é um padrão que tem o objetivo de substituir um DOC(depended-on component)
+    em um determinado tipo de teste por motivos de performance(acessar o banco varias vezes) 
+    ou segurança(acessar uma api de emissao de nota fiscal varias vezes)
+    Obs: conteúdo do livro: xUnitTestPatterns.
+
+
+    NEM TUDO É MOCK
+    http://xunitpatterns.com/
+
+![img.png](src/images/tipos_testes.png)
+
+    Dummy(fictício) = tanto faz se é joão ou maria, ou params
+    que nao sao utilizados pelo comportamento que estamos testando.
+
+    Stubs: é oq usamos pra substituir um tipo de retorno.(nao é o mock e sim stub, passa por cima de retornos.)
+
+
+    
