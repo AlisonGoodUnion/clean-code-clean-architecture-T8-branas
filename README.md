@@ -569,9 +569,37 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     self-validation,
     timely 
 
-![img.png](driver_drivern_ports.png)
+![img.png](src/images/driver_drivern_ports.png)
 
     API é uma interface que estou expondo ao mundo e posso ter vários tipos de
     drivers, driven sides também tem portas as regras estão plugadas e expostas
     na API e usa uma interface que usa um driven externo(no caso o servico de currency).
-    
+
+    O hexágono não é um hexágono porque o número seis é importante, mas sim para permitir que 
+    as pessoas que fazem o desenho tenham espaço para inserir portas e adaptadores conforme necessário, não sendo limitados por um desenho unidimensional em camadas. 
+    O termo "arquitetura hexagonal" vem desse efeito visual
+    FONTE: https://alistair.cockburn.us/hexagonal-architecture/
+
+![img.png](src/images/driverside.png)
+
+    (Inbound side ou driver side onde tem todos que podem interagir.)
+    Quando alguém quer interagir com a aplicação: deve utilziar um adaptador específico
+    para cada tipo de tecnologia (REST, GraphQL, gRPC, GUI, Queue, CLI, TEST)
+    sem que a aplicação saiba qualquer detalhe sobre a forma de acesso.
+
+![img.png](src/images/drivenside.png)
+
+    Quando a aplicação quer interagir com alguém, ela também utiliza um
+    adaptador específico para cada tipo de tecnologia(SQL, API, FileSystem, Queue)
+    Sem que a aplicação saiba qualquer detalhe sobre a forma de acesso(interface)
+
+    Então: Sempre que o DRIVER olhar para a plicação ele olha para um contrato(interface ou whatever).
+    E quando a aplicação interage com um DRIVEN(algum tipo de recurso) também fala com contrato.
+
+    Temos porta dos 2 lados.
+
+![img.png](src/images/finalpicture.png)
+
+    A aplicação expõe uma ou mais portas, dispositivos se conectam nelas e a aplicação 
+    recebe via injeção de dependência o driven dos recursos que ela consome.
+    Faz sentido aplicar em todos os projetos. 
