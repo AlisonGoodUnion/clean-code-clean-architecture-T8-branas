@@ -523,8 +523,10 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     #: npx ts-jest --init
     #: npx add express @types/express pg-promise
     #: npx ts-node src/main.ts
-    TEST MOCKS: #: npm add sinon 
+    TEST MOCKS: #: npm add sinon
+    #: npm add @types/sinon
     nodemon para auto-reload #: npx nodemon src/main.ts
+    
 
     TESTES: 
     1-Não deve criar um pedido com CPF inválido.
@@ -630,6 +632,9 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     que nao sao utilizados pelo comportamento que estamos testando.
 
     Stubs: é oq usamos pra substituir um tipo de retorno.(nao é o mock e sim stub, passa por cima de retornos.)
+    Serve para substituir um component que forma uma dependência indireta que você não consegue confiar.
+    na V1 do InvoiceController ficaria inviavel mockar. 
+    Por isso é interessante separar as camadas.
 
 
     

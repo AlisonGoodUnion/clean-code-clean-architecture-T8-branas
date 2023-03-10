@@ -1,12 +1,19 @@
 import InvoiceService from "./InvoiceService";
 import PurchaseRepository from "./PurchaseRepository";
 import CurrencyGateway from "./CurrencyGateway";
+import PurchaseRepositoryDatabase from "./PurchaseRepositoryDatabase";
+import CurrencyGatewayHttp from "./CurrencyGatewayHttp";
 
 export default class InvoiceServiceImpl implements InvoiceService {
 
-    constructor(
-        readonly purchaseRepository: PurchaseRepository,
-        readonly currencyGateway: CurrencyGateway) {
+    purchaseRepository: PurchaseRepositoryDatabase;
+    currencyGateway: CurrencyGatewayHttp;
+
+    //declaracao sem inversao dependencia.
+    //assim temos a dependencia indireta
+    constructor() {
+        this.purchaseRepository = new PurchaseRepositoryDatabase();
+        this.currencyGateway = new CurrencyGatewayHttp();
     }
 
     async calculateInvoice(cardNumber: string, month: number, year: number): Promise<number> {
