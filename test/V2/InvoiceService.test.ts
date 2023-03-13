@@ -28,10 +28,18 @@ test("Deve testar o calculo da fatura usando stub", async function() {
     const total = await invoiceService.calculateInvoice("1234123412341234");
 
     expect(total).toBe(300);
-    currencyGatewayHttpStub.restore(); //varios testes devemos voltar pra instancia original.
-    // purchaseRepositoryDatabseStub.restore();
 
-    getMonthStub.restore();
-    getFullYearStub.restore();
+    sinon.restore();
+});
 
+test("Deve testar o calculo da fatura usando spy", async function() {
+    const sinonSpy = sinon.spy(PurchaseRepositoryDatabase.prototype, "getPurchases");
+
+    const invoiceService = new InvoiceServiceImpl();
+    const total = await invoiceService.calculateInvoice("1234123412341234");
+
+    expect(total).toBe(690);
+    //assim conseguimos validar se realmente o getPurchases foi chamado com os valores corretos.
+    //entao caso alguem faça alteração nos dados das datas ou card_number o teste não vai passar.
+    expect(sinonSpy.calledWith("1234123412341234", 9, 2022)).toBeTruthy();
 });

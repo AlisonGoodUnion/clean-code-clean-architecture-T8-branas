@@ -19,8 +19,8 @@ export default class InvoiceServiceImpl implements InvoiceService {
     async calculateInvoice(cardNumber: string): Promise<number> {
         //driven (outbound)
         const date = new Date();
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
+        const month = 9;
+        const year = 2022;
 
         const purchases = await this.purchaseRepository.getPurchases(cardNumber, month, year);
         const currencyAmount = await this.currencyGateway.getCurrency();

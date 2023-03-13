@@ -16,7 +16,6 @@ export default class PurchaseRepositoryDatabase implements PurchaseRepository {
 
         const purchases = [];
         for (const purchaseData of purchasesData) {
-            console.log(purchaseData);
             purchases.push(
                 new Purchase(
                     purchaseData.card_number,
@@ -24,6 +23,8 @@ export default class PurchaseRepositoryDatabase implements PurchaseRepository {
                     purchaseData.currency)
             )
         }
+
+        await connection.$pool.end();
         return purchases;
     }
 }

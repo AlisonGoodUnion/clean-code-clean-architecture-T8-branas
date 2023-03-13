@@ -636,5 +636,13 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     na V1 do InvoiceController ficaria inviavel mockar. 
     Por isso é interessante separar as camadas.
 
+    Spy: Analisa se algo foi chamado e como eventualemnte foi, é útil pra detecção,
+    é uma especie de log de tudo que teu component que esta sendo testado esta fazendo
+    em relação a outros componentes que ele dependa de forma indireta.
+    podemos combinar stub e spy.
+    
+    
+    
+    
 
     
