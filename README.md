@@ -635,15 +635,20 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     Serve para substituir um component que forma uma dependência indireta que você não consegue confiar.
     na V1 do InvoiceController ficaria inviavel mockar. 
     Por isso é interessante separar as camadas.
+    (simplesmente passa por um valor, chamou get, retorna valor!)
 
     Spy: Analisa se algo foi chamado e como eventualmente foi, é útil para detecção,
     é uma especie de log de tudo que teu component que esta sendo testado esta fazendo
     em relação a outros componentes que ele dependa de forma indireta.
     podemos combinar stub e spy.
+    (ó fica de olho nesse metodo e ve se ele foi chamado com essas propriedades 1x 2x 10x.)
 
     Mock: é similar ao Stup ou Spy, muda apenas o design, colocamos espectativas no mockobjetct. 
     e validamos se realmente aconteceu o que estávamos prevendo. 
+    (pega o objeto ve se isso acontece, retorna esse valor, pode usar como stub ou como spy ou como os 2 ao msm temp.)
     
+
+    Tudo isso não seria tão relevante se utilizássemos  Ports and Adapters. 
     
     
     
