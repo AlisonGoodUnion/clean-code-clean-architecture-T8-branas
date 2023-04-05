@@ -672,3 +672,97 @@ https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html
     Então Ports and Adapters é:  
     O foco é, quem guia a aplicação e os recursos que ela consome devem ser externalziados
     vantagem: traz testabilidade.
+
+
+##### Clean Design faz mais sentido que Clean Architecture.
+
+    "Design is invevitable the alternative to good design is bad design, not no design at all."
+    - Douglas Martin.
+
+    Qual a diferença de design e arquitetura ?
+    arch > design > code.
+    
+    O código é uma mera sequência de instruções enquanto o 
+    design reflete a interação entre vários blocos 
+    e arquitetura é a sustentação para que tudo alcance o resultado necessário em cada contexto.
+
+    "The goal of software architecture is to minimize the human resources 
+    required to build and maintain the required system."
+    - Robert C. Martin
+
+
+    Architecture are those decisions which are both important and hard to change.
+    To me the term architecture conveys a notion of the core
+    elements of the system, the pieces that are difficult to change.
+    A foundation on which the rest must be built.
+    - Martin Fowler
+
+    O que considerar na hora de definir o design e arquitetura ? 
+    Escopo do produto ? 
+    Tamanho da equipe ?
+    Prazo de entrega ?
+    Tipo de dispositivo ?
+    Volume de requisições ?
+    Orçamento ? 
+    
+    O design e a arquitetura de um ERP provavelmente será diferente de uma plataforma
+    de streaming, que também terá necessidades diferentes de uma rede social.
+    
+    Você não é obrigado, e nem deve, a adotar o mesmo tipo de abordagem/solução para tudo.
+    Não existe a bala de prata para tudo. DDD nao deve ser utilizado em TUDO.
+    
+    Nas últimas décadas, vários modelos influenciaram o design e arquitetura...
+    BCE, EBI, EIC, ECB de Ivar Jacobson (1992)
+
+![img.png](src/images/ivar_jacobson.png)
+
+
+    Begginers may sometime only use entity object as data carriers and place all dynamic behaviour
+    in control objects. This should, however be avoided. Instead, "quite a lot of behaviour should
+    be placed in the entity objects".
+    - Ivar Jacobson.
+
+
+![img.png](src/images/ddd_eric_evans.png)
+    
+    Domain Driven Design, Eric Evans(2003);
+
+    "The heart of software is its ability to solve domain-related problems for its user"
+    - Eric Evans.
+
+    Allow an application to equally be driven by users, programs, automated test or batch scripts,
+    and to be developed and tested in isolation from its eventual run-time devices and databases.
+    Alistair Cockburn, “Hexagonal architecture“
+    
+![img.png](src/images/jeffpalermo_onion.png)
+
+    Jeff Palermo ja coloca domain model dentro da aplication, algo parecido com clean architecture
+    
+    "The biggest offender(and most common) is the coupling of UI and business logic to data access."
+    - Jeff Palermo
+
+#### Arquiteturas ? Onion, Clean, Hexagonal ?
+    
+    Todas elas tem acoisas em comum...
+    Isolam as regras de negocio;
+    Definem camadas e suas responsabilidades;
+    Criam um fluxo de controle e dependência ordenado e direcional;
+    Favorecem Testabilidade;
+    São independentes de recursos externso;
+    Favorecem a evolução tecnológica.
+    
+
+![img.png](src/images/clean_architecture_robert_martin.png)
+    
+    Clean Architecture é um modelo que tem como objetivo o desacoplamento entre
+    as regras de negócio, ou domínio, da aplicação e os recursos externos 
+    como frameworks e banco de dados.
+
+    "The center of your application is not the database, nor is it one or more of the frameworks 
+    you may be using. "The center of yout application is the use cases of your application."
+    - Robert Martin
+
+
+
+    
+    
