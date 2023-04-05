@@ -647,10 +647,28 @@ Sempre escrever testes antes, assim perdemos o medo e ganhamos mais confiança n
     e validamos se realmente aconteceu o que estávamos prevendo. 
     (pega o objeto ve se isso acontece, retorna esse valor, pode usar como stub ou como spy ou como os 2 ao msm temp.)
     
+    Tudo isso não seria tão relevante se utilizássemos  Ports and Adapters.
 
-    Tudo isso não seria tão relevante se utilizássemos  Ports and Adapters. 
+    Fake: Ter uma implementação específica de um contrato/interface só que feito
+    por você sob medida para retornar oque você quer.
     
-    
-    
+![img.png](src/images/test_patternsv2.png)
 
-    
+https://martinfowler.com/articles/mocksArentStubs.html
+https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html
+
+
+##### Sem tempo para criar testes!
+    Temos tempo para ouvir reclamações dos clientes que descrobrem erros em produção; 
+    Temos tempo para corrigir bugs;
+    Temos tempo para lidar com código de baixa qualidade que não foi refatorado;
+    Temos tempo para testar manualmente;(extremamente doloroso repetitivo);
+    Temos tempo para treinar pessoas novas que entram no time toda hora(giro alto por conta da má qualidade);
+    Temos tempo para reclamar do projeto;
+
+    Os testes automatizados são a únca forma que temos para garantir que o código funciona.  
+    Mas os testes manuais também continuam sendo importantes, principalmente para os de aceitação.
+
+    Então Ports and Adapters é:  
+    O foco é, quem guia a aplicação e os recursos que ela consome devem ser externalziados
+    vantagem: traz testabilidade.

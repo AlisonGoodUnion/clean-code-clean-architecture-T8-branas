@@ -1,18 +1,35 @@
 import InvoiceServiceImpl from "../../src/V3/InvoiceServiceImpl";
 import expect from "expect";
-import CurrencyGatewayHttp from "../../src/V3/CurrencyGatewayHttp";
 import sinon from "sinon";
-import PurchaseRepositoryDatabase from "../../src/V3/PurchaseRepositoryDatabase";
 import Purchase from "../../src/V3/Purchase";
-import axios from "axios";
+import PurchaseRepository from "../../src/V3/PurchaseRepository";
+import CurrencyGateway from "../../src/V3/CurrencyGateway";
 
-test("Deve testar o calculo da fatura usando stub", async function() {
+test("Deve testar o calculo da fatura usando fake", async function () {
 
-    const purchaseRepository = new PurchaseRepositoryDatabase();
-    const currencyGateway = new CurrencyGatewayHttp();
+    //Quando existe a inversao de dependencia(Ports and Adapters)
+    //Conseguimos utilizar Fakes, assim nao precisamos utilizar Stubs.
+
+    //fake impl que simula a impl original
+    const purchaseRepository: PurchaseRepository = {
+        async getPurchases(cardNumber: string, month: number, year: number): Promise<Purchase[]> {
+            return [
+                new Purchase("1234123412341234", 100, "USD")
+            ];
+        }
+    };
+    // FAKE: implementação que simula implementação original
+    //
+    const currencyGateway: CurrencyGateway = {
+        async getCurrency(): Promise<number> {
+            return 3;
+        }
+    };
 
     const invoiceService = new InvoiceServiceImpl(purchaseRepository, currencyGateway);
+    //agora essa data é dummy pq não serve mais para nada
+    //passamos por cima.
     const total = await invoiceService.calculateInvoice("1234123412341234", 9, 2022);
-    expect(total).toBe(690);
+    expect(total).toBe(300);
     sinon.restore();
 });

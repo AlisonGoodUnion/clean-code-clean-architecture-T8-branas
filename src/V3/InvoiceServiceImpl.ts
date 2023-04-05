@@ -3,6 +3,7 @@ import PurchaseRepository from "./PurchaseRepository";
 import CurrencyGateway from "./CurrencyGateway";
 import PurchaseRepositoryDatabase from "./PurchaseRepositoryDatabase";
 import CurrencyGatewayHttp from "./CurrencyGatewayHttp";
+import Invoice from "./Invoice";
 
 export default class InvoiceServiceImpl implements InvoiceService {
 
@@ -20,14 +21,12 @@ export default class InvoiceServiceImpl implements InvoiceService {
         const currencyAmount = await this.currencyGateway.getCurrency();
 
         //application regras da aplicacao
-        let total = 0;
-        for(const purchase of purchases) {
-            if (purchase.currency === 'USD') {
-                total += purchase.amount * currencyAmount;
-            } else {
-                total += purchase.amount;
-            }
-        }
+
+
+        const invoice = new Invoice(currencyAmount);
+        invoice.setPurchases(purchases);
+        const total= invoice.getTotal();
+
         return total;
     }
 }
